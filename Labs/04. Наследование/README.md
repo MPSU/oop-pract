@@ -31,7 +31,7 @@ MyWidget(QWidget* parent = nullptr);
 Для чтобы избежать ошибки с ненайденным заголовочным файлом вашего класса,
 добавьте следующую строку в `CMakeLists.txt`:
 ```cmake
-target_include_directories(uitest PUBLIC ${CMAKE_CURRENT_LIST_DIR})
+target_include_directories(proj PUBLIC ${CMAKE_CURRENT_LIST_DIR})
 ```
 где `proj` - название *ВАШЕГО* проекта, его можно подсмотреть в начале файла, там есть запись:
 ```cmake
