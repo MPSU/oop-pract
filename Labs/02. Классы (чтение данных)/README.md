@@ -32,7 +32,6 @@ public:
     Audio() {
         title = "Unknown";
         author = "Unknown";
-        year = 2026
         year = 2026;
     }
 
@@ -219,7 +218,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);  // Это оставляем без изменений
 
-    // Соединяем сигнал editionFinished() объекта editSearch
+    // Соединяем сигнал editingFinished() объекта editSearch
     // и слот search() объекта this (самого окна MainWindow)
     connect(ui->editSearch, &QLineEdit::editingFinished, this, &MainWindow::search);
 
