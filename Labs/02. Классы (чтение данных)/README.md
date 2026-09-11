@@ -33,6 +33,7 @@ public:
         title = "Unknown";
         author = "Unknown";
         year = 2026
+        year = 2026;
     }
 
     // Конструктор с параметрами (использует список инициализации)
@@ -220,7 +221,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Соединяем сигнал editionFinished() объекта editSearch
     // и слот search() объекта this (самого окна MainWindow)
-    connect(ui->editSearch, &QLineEdit::editionFinished, this, &MainWindow::search);
+    connect(ui->editSearch, &QLineEdit::editingFinished, this, &MainWindow::search);
 
     // .... остальной код
 }
