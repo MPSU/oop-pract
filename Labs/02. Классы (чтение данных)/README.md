@@ -35,7 +35,7 @@ public:
         year = 2026;
     }
 
-    // Конструктор с параметрами (использует список инициализации)
+    // Конструктор с параметрами
     Audio(const std::string& audioTitle, const std::string& audioAuthor, int audioYear) {
         title = audioTitle;
         author = audioAuthor;
@@ -171,6 +171,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Если файл открыт успешно, считываем содержимое
     if (reader.is_open()) {
+        // Вся рутина по чтению файлов скрыта внутри класса CsvReader
         tracks = reader.readAll();
     }
     else {
