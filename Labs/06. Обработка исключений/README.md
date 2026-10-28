@@ -163,17 +163,21 @@ class MyException : public std::exception {
 private:
     std::string message_;
     unsigned code_;
+    std::string what_;
 
 public:
     MyException(const std::string& msg, unsigned code)
-        : message_(msg), code_(code) {}
+        : message_(msg),
+          code_(code),
+          what_(std::to_string(code_) + ": " + message_) {}
 
     const char* what() const noexcept override {
-        std::string errstr = std::to_string(code_) + ": " + message_;
-        return errstr.c_str();
+        return what_.c_str();
     }
 
-    unsigned code() const;
+    unsigned code() const noexcept {
+        return code_;
+    };
 };
 ```
 
