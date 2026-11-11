@@ -168,7 +168,7 @@ int main() {
 {
     "cars": [
         { "name": "Ford", "year": 2018, "power": 123 },
-        { "name": "KIA", "year": 2023, "power": 115 },
+        { "name": "KIA", "year": 2023, "power": 115 }
     ]
 }
 ```
@@ -182,6 +182,7 @@ int main() {
 ```cpp
 // Текст в формате JSON:
 //   { "city": "Moscow", "year": 1147 }
+
 // \" нужны для экранирования кавычек, чтобы компилятор их не воспринял как конец строки
 std::string jsonstr = "{ \"city\": \"Moscow\", \"year\": 1147 }";
 
